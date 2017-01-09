@@ -12,13 +12,17 @@ if [ $? -eq 0 -a $INETSTATUS -eq 200 ]; then
   fi
   exit 0
 else
-  lastdate=`cat $TMP`
-  now=`date +%s`
-  diff=0
-  let diff="($now - $lastdate)/60"
-  if [ $diff -gt $TOLERANCE ]; then
-    sudo reboot
+  if [ -f $TMP ]; then
+    lastdate=`cat $TMP`
+    now=`date +%s`
+    diff=0
+    let diff="($now - $lastdate)/60"
+    if [ $diff -gt $TOLERANCE ]; then
+      sudo reboot
+    fi
   else
     echo `date +%s` > $TMP
   fi
 fi
+
+exit
