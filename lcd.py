@@ -11,11 +11,11 @@ def main(argv):
         try:
                 opts,args = getopt.getopt(argv,"ht:r:g:b:",["text=","red=","green=", "blue="])
         except getopt.GetoptError:
-                print 'lcd.py -t <text> -r <color> -g <color> -b <color>'
+                print 'lcd.py -t <text> -r <int> -g <int> -b <int>'
                 sys.exit(2)
         for opt,arg in opts:
                 if opt == "-h":
-                        print 'lcd.py -t <text> -r <color> -g <color> -b <color>'
+                        print 'lcd.py -t <text> -r <int> -g <int> -b <int>'
                         sys.exit()
                 if opt == "-t":
                         text = arg
