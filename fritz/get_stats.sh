@@ -36,3 +36,5 @@ while read line; do
        day=`date --date="1 month ago" +%m/%Y` ;;
   esac
 done < /tmp/fbstats.txt
+
+tail -n 1  -q /home/pi/inet-usage-data/* > /home/pi/inet-usage-data/total.dat
