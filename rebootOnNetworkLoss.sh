@@ -2,7 +2,7 @@
 
 TMP=/tmpfs/inet.stat
 CURL=/usr/bin/curl
-TOLERANCE=10 # minutes
+TOLERANCE=10 # minutes without network
 
 INETSTATUS=`$CURL -Is http://www.google.de | grep HTTP | cut -d " " -f 2`
 ROUTERSTATUS=`$CURL -Is http://fritz.box | grep HTTP | cut -d " " -f 2`
