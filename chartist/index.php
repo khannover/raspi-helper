@@ -38,6 +38,7 @@
     $date2 = date("Y-m-d");
 
 echo '
+    <a href="/chartist/total.php">Total</a>
     <form method=GET action=index.php>
       <input type="date" name="date" value="' . (isset($_GET['date'])? $_GET['date'] : $date2) . '"><input id="slice" name="slice" type="range" min="1" max="60" value="' . $slice . '" onchange=javascript:showSlice(this.value)" oninput="javascript:showSlice(this.value)"><span id="sliceLabel">' . $slice . '</span>
       <input type="submit" value="Auswählen">
