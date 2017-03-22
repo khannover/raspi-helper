@@ -37,4 +37,4 @@ while read line; do
   esac
 done < /tmp/fbstats.txt
 
-tail -n 1  -q /home/pi/inet-usage-data/* > /home/pi/inet-usage-data/total.dat
+tail -n 1  -q $DATADIR/* > $DATADIR/total.dat
